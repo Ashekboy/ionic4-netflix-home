@@ -1,44 +1,69 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header no-border>
+  <ion-toolbar color="white">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
+    <ion-img src="../assets/logo/netflix.png" class="logo"></ion-img>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://beta.ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://beta.ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://beta.ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://beta.ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+<ion-content padding>
+  <ion-slides [options]="slidesOptionsTop">
+    <ion-slide>
+      <ion-card class="card">
+        <h4>Categories</h4>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card class="card">
+        <h4>Showing tonight</h4>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card class="card">
+        <h4>New Releases</h4>
+      </ion-card>
+    </ion-slide> 
+  </ion-slides>
+    <ion-item lines="none">
+      <p slot="start">TV Show</p>
+      <ion-icon name="arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+    <ion-slides [options]="slidesOptions">
+      <ion-slide>
+        <ion-card [style.background]="'url(./assets/images/stranger.jpg)'" class="tv_card"></ion-card>
+      </ion-slide> 
+      <ion-slide>
+        <ion-card [style.background]="'url(./assets/images/black.jpg)'" class="tv_card"></ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card [style.background]="'url(./assets/images/super.jpg)'" class="tv_card"></ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card [style.background]="'url(./assets/images/flash.jpg)'" class="tv_card"></ion-card>
+      </ion-slide>   
+    </ion-slides>
+    <ion-item lines="none">
+      <p slot="start">Movies</p>
+      <ion-icon name="arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+    <ion-slides [options]="slidesOptions">
+      <ion-slide>
+        <ion-card [style.background]="'url(./assets/images/ecualizer.jpg)'" class="movie_card"></ion-card>
+      </ion-slide> 
+      <ion-slide>
+        <ion-card [style.background]="'url(./assets/images/avengers.jpg)'"  class="movie_card"></ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card [style.background]="'url(./assets/images/spy.jpg)'"  class="movie_card"></ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card [style.background]="'url(./assets/images/pixels.jpg)'"  class="movie_card"></ion-card>
+      </ion-slide>   
+    </ion-slides>
 </ion-content>

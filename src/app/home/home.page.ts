@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  slidesOptions = {
+    slidesPerView: 3
+  };
 
+  slidesOptionsTop = {
+    slidesPerView: 2
+  };
 }
