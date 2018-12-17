@@ -8,6 +8,7 @@ Clone UI home screen of the Netflix App
 </p>
 
 ## Ionic info
+```
 Ionic:
 
    ionic (Ionic CLI)             : 4.5.0 
@@ -20,3 +21,4 @@ Ionic:
 System:
    npm    : 6.4.1
    OS     : Windows 10
+```
